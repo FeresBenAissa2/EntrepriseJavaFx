@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" stylesheets="@../../../Styles/ManageEntreprise.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EntrepriseController">
+    <children>
+        <VBox fx:id="local" layoutY="1.0" prefHeight="750.0" prefWidth="250.0" styleClass="new_local_container">
+            <children>
+                <Label text="Nom" />
+                <TextField fx:id="entreprise_nom_fid" />
+                <Text fx:id="errorNom" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error_label" text="err1" wrappingWidth="229.13671875" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+                <TextField fx:id="entreprise_address_fid" />
+                <Text fx:id="errorAddress" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error_label" text="err2" wrappingWidth="229.13671875" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type Entreprise" />
+            <TextField fx:id="entreprise_type_fid" />
+                <Text fx:id="errorType" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error_label" text="err3" wrappingWidth="228.13671875" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description Entreprise" />
+            <TextField fx:id="entreprise_description_fid" />
+                <Text fx:id="errorDescription" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error_label" text="err4" wrappingWidth="229.13671875" />
+                <Button fx:id="save_btn_fid" mnemonicParsing="false" styleClass="save_button" text="Save" />
+                <Button fx:id="update_btn_fid" mnemonicParsing="false" styleClass="update_button" text="Update" />
+                <Button fx:id="delete_btn_fid" mnemonicParsing="false" text="Delete" />
+            </children>
+        </VBox>
+        <AnchorPane layoutX="250.0" layoutY="1.0" prefHeight="750.0" prefWidth="600.0" styleClass="new_local_container">
+            <children>
+                <Text layoutX="151.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page_title" text="Manage Entreprises" />
+                <TableView fx:id="local_table_view_fid" layoutX="27.0" layoutY="146.0" prefHeight="458.0" prefWidth="547.0">
+                    <columns>
+                        <TableColumn fx:id="column_entreprise_id_fid" prefWidth="53.0" text="id" />
+                        <TableColumn fx:id="column_entreprise_nom_fid" prefWidth="139.0" text="Nom" />
+                        <TableColumn fx:id="column_entreprise_type_fid" prefWidth="102.0" text="Type" />
+                        <TableColumn fx:id="column_entreprise_desciption_fid" prefWidth="139.0" text="Description" />
+                  <TableColumn fx:id="column_entreprise_address_fid" prefWidth="110.0" text="Address" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
